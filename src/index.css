@@ -1,5 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+	--clr-mbg: #222;
+	--clr-hbg: #333;
+	--clr-border: #666;
+	--clr-th: #FF8C00;
+	--clr-ts: #2fceff;
+	--clr-tm: #ddd;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	overflow-x: hidden;
+}
+
+body {	
+	background-color: var(--clr-mbg);
+}
+
+.App {
+	min-height: 100vh;
+}
+
+.Header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: var(--clr-hbg);
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+	padding: 0.5rem 2rem;
+	border-bottom: 1px solid var(--clr-border);
+}
+
+.Header > h1 {
+	color: var(--clr-ts);
+	font-weight: 600;
+	font-size: 28px;
+}
+
+.Nav {
+	color: var(--clr-th);
+}
+
+main {
+	padding: 5rem 5%;
+	color: var(--clr-tm);
+}
+
+.Footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: var(--clr-hbg);
+	display: flex;
+	justify-content: center;
+	color: var(--clr-th);
+	padding: 1rem 0;
+	border-top: 1px solid var(--clr-border);
+}
+
+@media (min-width: 480px) {
+	.Header {
+		flex-direction: row;
+		align-items: center;
+	}
 }
