@@ -1,7 +1,7 @@
 const Nav = () => {
     return (
       <nav className="Nav">
-          <h1>Nav</h1>
+          <form className="searchForm"></form>
       </nav>
     )
   }
