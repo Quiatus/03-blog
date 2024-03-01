@@ -32,16 +32,18 @@ body {
 }
 
 .Header {
-	position: fixed;
+	position: sticky;
 	width: 100%;
 	top: 0;
 	background-color: var(--clr-hbg);
 	display: flex;
 	flex-direction: column;
 	align-items: start;
+	gap: 1rem;
 	justify-content: space-between;
 	padding: 0.5rem 2rem;
 	border-bottom: 1px solid var(--clr-border);
+	
 }
 
 .Header > h1 {
@@ -51,7 +53,13 @@ body {
 }
 
 .Nav {
-	color: var(--clr-th);
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: 1rem;
+	width: 100%;
+	position: relative;
 }
 
 main {
@@ -113,6 +121,61 @@ hr:last-of-type {
 	color: var(--clr-hw);
 }
 
+form {
+	width: 100%;
+}
+
+input[type='text'] {
+	background-color: var(--clr-mbg);
+	border: 1px solid var(--clr-border);
+	border-radius: 0.5rem;
+	font: inherit;
+	color: var(--clr-th);
+	font-weight: 500;
+	padding: 0.25rem 0.5rem;
+	width: 100%;
+	min-width: 100%;
+}
+
+::placeholder {
+	color: var(--clr-border);
+}
+
+label {
+	position: absolute;
+	left: -9999px;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+    width: 100%;
+}
+
+ul > li {
+	display: block;
+    flex: 0 1 auto;
+}
+
+ul > li:last-child {
+	margin-right: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: var(--clr-th);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+a:hover {
+	cursor: pointer;
+	color: var(--clr-hh);
+}
+
 .Footer {
 	position: fixed;
 	width: 100%;
@@ -125,9 +188,39 @@ hr:last-of-type {
 	border-top: 1px solid var(--clr-border);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
 	.Header {
+		position: fixed;
 		flex-direction: row;
 		align-items: center;
 	}
+
+	.Nav {
+		flex-direction: row;
+		align-items: center;
+		gap: 6rem;
+		width: fit-content;
+	}
+
+	ul {
+		list-style-type: none;
+		display: flex;
+		align-items: end;
+		justify-content: end;
+		width: fit-content;
+	}
+
+	ul > li {
+		display: inline-block;
+		margin-right: 4rem;
+	}
+
+	ul > li:last-child {
+		margin-right: 0;
+	}
+
+	form {
+		width: fit-content;
+	}
+	
 }

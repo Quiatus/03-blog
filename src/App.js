@@ -8,14 +8,24 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
+	const [posts, setPosts] = useState([
+		{
+			id: 1,
+			title: "First Post",
+			datetime: "March 01, 2024 12:05:18",
+			body: "Lorem ipsum dolor sit amet."
+		}
+	])
+	const [search, setSearch] = useState('');
+	const [searchResults, setSearchResults] = useState([]);
 
 	const navigate = useNavigate();
 
 	return (
 		<Routes>
 			<Route path="/" element={<Layout 
-					//search={search} 
-					//setSearch={setSearch} 
+					search={search} 
+					setSearch={setSearch} 
 				/>}>
 				<Route index element={<Home /*posts={searchResults}*/ />} />
 				<Route path="post">
