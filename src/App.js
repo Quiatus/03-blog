@@ -14,12 +14,30 @@ function App() {
 			title: "First Post",
 			datetime: "March 01, 2024 12:05:18",
 			body: "Lorem ipsum dolor sit amet."
+		},
+		{
+			id: 2,
+			title: "Second Post",
+			datetime: "March 02, 2024 12:05:18",
+			body: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. "
 		}
 	])
 	const [search, setSearch] = useState('');
 	const [searchResults, setSearchResults] = useState([]);
+	const [postTitle, setPostTitle] = useState('');
+	const [postBody, setPostBody] = useState('');
 
 	const navigate = useNavigate();
+
+	const handleSubmit = () => {
+
+	}
+
+	const handleDelete = (id) => {
+		const postsList = posts.filter(post => post.id !== id)
+		setPosts(postsList);
+		navigate('/');
+	}
 
 	return (
 		<Routes>
@@ -27,18 +45,18 @@ function App() {
 					search={search} 
 					setSearch={setSearch} 
 				/>}>
-				<Route index element={<Home /*posts={searchResults}*/ />} />
+				<Route index element={<Home posts={posts} />} />
 				<Route path="post">
 					<Route index element={<NewPost 
-						//handleSubmit={handleSubmit}
-						//postTitle={postTitle}
-						//setPostTitle={setPostTitle}
-						//postBody={postBody}
-						//setPostBody={setPostBody}
+						handleSubmit={handleSubmit}
+						postTitle={postTitle}
+						setPostTitle={setPostTitle}
+						postBody={postBody}
+						setPostBody={setPostBody}
 					/>} />
 					<Route path=":id" element={<PostPage
-						//posts={posts}
-						//handleDelete={handleDelete}	
+						posts={posts}
+						handleDelete={handleDelete}	
 					/>} />
 				</Route>
 				<Route path="about" element={<About />} />
