@@ -6,7 +6,7 @@ const Home = ({ posts }) => {
       {posts.length ? (
         <Feed posts={posts} />
       ) : (
-        <h2 className="titleError">Nothing is posted yet!</h2>
+        <h2 className="titleError">No posts found!</h2>
       )}
 
     </main>
