@@ -31,7 +31,6 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-
 }
 
 .Header {
@@ -46,7 +45,6 @@ body {
 	justify-content: space-between;
 	padding: 0.5rem 2rem;
 	border-bottom: 1px solid var(--clr-border);
-	
 }
 
 .Header > h1 {
@@ -83,10 +81,6 @@ hr {
 	height: 1px;
 	background-color: var(--clr-border);
 }
-
-/* hr:last-of-type {
-	display: none;
-} */
 
 .titleError {
 	color: red;
@@ -327,5 +321,4 @@ a:hover {
 	.newPostForm > textarea {
 		height: 50vh;
 	}
-	
 }
