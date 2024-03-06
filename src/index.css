@@ -82,6 +82,10 @@ hr {
 	background-color: var(--clr-border);
 }
 
+.post > hr {
+	margin: 0;
+}
+
 .titleError {
 	color: red;
 }
@@ -92,9 +96,15 @@ hr {
 	gap: 1rem;
 }
 
+button {
+	max-width: 150px;
+}
+
 .postFooter {
 	display: flex;
-	justify-content: flex-end;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 1rem;
 }
 
 .blogTitle {
@@ -143,7 +153,7 @@ hr {
 }
 
 .btnSubmit {
-	width: 100px;
+	width: 100%;
 	border: 2px solid var(--clr-tm);
 	color: var(--clr-tm);
 	font: 700 18px "Open Sans", sans-serif;

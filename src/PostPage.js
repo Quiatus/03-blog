@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom"
 const PostPage = ({ posts, handleDelete }) => {
   const { id } = useParams()
   const post = posts.find(post => (post.id).toString() === id)
+  const postBody = post.body.replace(/(?:\r\n|\r|\n)/g, '<br>')
 
   return (
     <main>
@@ -10,9 +11,13 @@ const PostPage = ({ posts, handleDelete }) => {
         {post && 
           <>
             <h2 className="blogTitlePost">{post.title}</h2>
-            <p className="blogDate">{`Posted on: ${post.datetime}`}</p>
-            <p className="blogBody">{post.body}</p>
+            <p className="blogDate">{`Posted on: ${post.datetime} ${post.edited ? `, Edited on: ${post.edited}` : ``}`} </p>
+            <p className="blogBody" dangerouslySetInnerHTML={{__html: postBody}}></p>
+            <hr />
             <div className="postFooter">
+              <Link to={`/edit/${post.id}`}>
+                <button className="btnSubmit">Edit Post</button>
+              </Link>
               
               <button className="btnDel" onClick={() => handleDelete(post.id)}>Delete Post</button>
             </div>
