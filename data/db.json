@@ -4,15 +4,15 @@
       "id": "1",
       "title": "Post 01",
       "datetime": "06 March, 2024 15:16",
-      "edited": "06 March, 2024 15:34",
-      "body": "This is a testing post!\nShould also keep line breaks now!\n\nEven multiple ones!\n\nThis is trye!"
+      "edited": "06 March, 2024 15:50",
+      "body": "This is a testing post!\nShould also keep line breaks now!\n\nEven multiple ones!"
     },
     {
       "id": "2",
-      "title": "tr",
-      "datetime": "06 March, 2024 15:19",
+      "title": "Post 02",
+      "datetime": "06 March, 2024 15:52",
       "edited": null,
-      "body": "fgsdfgds \nsdfgdsfgdsfgdsf g sdf"
+      "body": "New post"
     }
   ]
 }

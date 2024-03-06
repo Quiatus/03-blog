@@ -11,7 +11,7 @@ const PostPage = ({ posts, handleDelete }) => {
         {post && 
           <>
             <h2 className="blogTitlePost">{post.title}</h2>
-            <p className="blogDate">{`Posted on: ${post.datetime} ${post.edited ? `, Edited on: ${post.edited}` : ``}`} </p>
+            <p className="blogDate">{`Posted on: ${post.datetime}. ${post.edited ? ` Last edited on: ${post.edited}.` : ``}`} </p>
             <p className="blogBody" dangerouslySetInnerHTML={{__html: postBody}}></p>
             <hr />
             <div className="postFooter">
