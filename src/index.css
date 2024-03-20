@@ -96,10 +96,6 @@ hr {
 	gap: 1rem;
 }
 
-button {
-	max-width: 150px;
-}
-
 .postFooter {
 	display: flex;
 	flex-direction: row;
@@ -153,7 +149,7 @@ button {
 }
 
 .btnSubmit {
-	width: 100%;
+	width: 120px;
 	border: 2px solid var(--clr-tm);
 	color: var(--clr-tm);
 	font: 700 18px "Open Sans", sans-serif;
@@ -274,15 +270,22 @@ a:hover {
 	background-color: var(--clr-hbg);
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	color: var(--clr-th);
 	padding: 1rem 0;
 	border-top: 1px solid var(--clr-border);
+	gap: 1rem;
+
 }
 
 .newPost {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+}
+
+svg {
+	color: var(--clr-th);
 }
 
 @media (min-width: 768px) {

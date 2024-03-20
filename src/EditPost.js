@@ -35,12 +35,16 @@ const EditPost = ({ posts, handleEdit, editBody, setEditBody, editTitle, setEdit
                     onChange={(e) => setEditBody(e.target.value)}
                     />
                     <div className="buttons">
-                    <button className="btnSubmit" type="submit" onClick={() => handleEdit(post.id)}>Submit</button>
+                    <button className="btnSubmit" type="submit" onClick={() => handleEdit(post.id)}>Save</button>
                     <button className="btnSubmit" onClick={(e) => {
                         e.preventDefault()
                         setEditTitle('')
                         setEditBody('')
                     }}>Clear</button>
+                    <Link to={`/post/${post.id}`}>
+                        <button className="btnSubmit" type="submit" onClick={() => handleEdit(post.id)}>Cancel</button>
+                    </Link>
+                    
                     </div>
                     
                 </form>
