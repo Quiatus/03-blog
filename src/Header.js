@@ -1,10 +1,10 @@
 import Nav from './Nav';
 
-const Header = ({ title, search, setSearch }) => {
+const Header = () => {
   return (
     <header className="Header">
-        <h1>{title}</h1>
-        <Nav search={search} setSearch={setSearch} />
+        <h1>React JS blog</h1>
+        <Nav />
     </header>
   )
 }
