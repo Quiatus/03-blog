@@ -4,7 +4,7 @@ const Post = ({ post }) => {
   return (
     <div>
         <div className="blogPost">
-            <Link to={`/post/${post.id}`}>
+            <Link to={`/posts/${post.id}`}>
                 <h2 className="blogTitle">{post.title}</h2>
             </Link>
             <p className="blogDate">{post.datetime}</p>

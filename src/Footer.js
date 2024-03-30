@@ -1,6 +1,10 @@
 import { FaLaptop, FaTabletAlt, FaMobileAlt } from 'react-icons/fa';
+import { useContext } from 'react';
+import DataContext from './context/DataContext';
 
-const Footer = ({ width }) => {
+const Footer = () => {
+  const { width } = useContext(DataContext)
+
   return (
     <footer className="Footer">© 2024 Quiatus 
     
